@@ -3,7 +3,7 @@
 <head>
   <title>Frames for FT graphics</title>
   <script type="text/javascript" src="styles.js"></script>
-  <link rel="stylesheet" type="text/css" href="./frameGlobalStyles.css">
+  <link rel="stylesheet" type="text/css" href="frameGlobalStyles.css">
 </head>
 <body>
   <style>
@@ -16,7 +16,16 @@
   <div id="chart"></div>
   <!-- THERE WAS THINE CHART -->
 
-  <script src="d3.min.js"></script>
+  {% if d3_path %}
+  <!-- Including local D3 via {{ d3_path }} -->
+  <script src="{{ d3_path }}"></script>
+  {% elif d3_version %}
+  <!-- Including D3 version {{ d3_version }} from CDN -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/{{ d3_version }}/d3.min.js"></script>
+  {% else %}
+  <!-- Including d3 version 3.5.17 from CDN -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  {% endif %}
   <script src="drawFrame.js"></script>
   <script src="saveSvgAsPng.js"></script>
   {% for script in js %}

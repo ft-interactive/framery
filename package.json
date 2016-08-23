@@ -4,6 +4,7 @@
   "engines": {
     "node": "6.3.0"
   },
+  "bin": "./lib/cli.js",
   "description": "A local development server for rapid D3 visualizations",
   "main": "lib/index.ts",
   "scripts": {
@@ -24,17 +25,21 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "dotenv": "^2.0.0",
-    "glob-promise": "^1.0.6",
+    "glob": "^7.0.5",
+    "glob-promise": "github:aendrew/glob-promise#d.ts",
     "graphic-frame": "github:ft-interactive/graphic-frame",
     "handlebars": "^4.0.5",
     "koa": "^2.0.0",
     "koa-bodyparser": "^3.1.0",
     "koa-browser-sync": "github:aendrew/koa-browser-sync#typescript",
+    "koa-compose": "^3.1.0",
     "koa-convert": "^1.2.0",
     "koa-mount": "^2.0.0",
     "koa-router": "^7.0.1",
     "koa-static": "^3.0.0",
-    "koa-views": "^5.0.2"
+    "koa-views": "^5.0.2",
+    "meow": "^3.7.0",
+    "nunjucks": "^2.4.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
