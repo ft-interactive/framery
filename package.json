@@ -4,7 +4,7 @@
   "engines": {
     "node": "6.3.0"
   },
-  "bin": "./lib/cli.js",
+  "bin": "./bin/framery.js",
   "description": "A local development server for rapid D3 visualizations",
   "main": "lib/index.ts",
   "scripts": {
