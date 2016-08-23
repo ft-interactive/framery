@@ -20,6 +20,7 @@
   },
   "files": [
     "./typings/index.d.ts",
+    "./lib/defs/glob-promise.d.ts",
     "./lib/index.ts",
     "./lib/routes.ts",
     "./lib/test/index.spec.ts",

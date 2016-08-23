@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title>Frames for FT graphics</title>
+  <script type="text/javascript" src="styles.js"></script>
+  <link rel="stylesheet" type="text/css" href="./frameGlobalStyles.css">
+</head>
+<body>
+  <style>
+  text {
+    font-family:metric;
+  }
+  </style>
+
+  <!-- HERE IS THINE CHART -->
+  <div id="chart"></div>
+  <!-- THERE WAS THINE CHART -->
+
+  <script src="d3.min.js"></script>
+  <script src="drawFrame.js"></script>
+  <script src="saveSvgAsPng.js"></script>
+  {% for script in js %}
+  <script src="{{ script }}"></script>
+  {% endfor %}
+</body>
+</html>

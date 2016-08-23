@@ -1,16 +1,16 @@
 {
-  "name": "koa2-typescript-boilerplate",
-  "version": "1.0.1",
+  "name": "framery",
+  "version": "1.0.0",
   "engines": {
     "node": "6.3.0"
   },
-  "description": "A boilerplate for using Koa2 with TypeScript",
-  "main": "build/index.js",
+  "description": "A local development server for rapid D3 visualizations",
+  "main": "lib/index.ts",
   "scripts": {
     "test": "tsc && mocha build/test",
-    "postinstall": "typings install && npm run build",
+    "postinstall": "typings install",
     "build": "tsc",
-    "start": "node build/index.js",
+    "start": "ts-node lib/index.ts",
     "dev-server": "nodemon -w lib -x ts-node lib/index.ts",
     "lint": "tslint lib/**/*.ts"
   },
@@ -24,9 +24,17 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "dotenv": "^2.0.0",
+    "glob-promise": "^1.0.6",
+    "graphic-frame": "github:ft-interactive/graphic-frame",
+    "handlebars": "^4.0.5",
     "koa": "^2.0.0",
     "koa-bodyparser": "^3.1.0",
-    "koa-router": "^7.0.1"
+    "koa-browser-sync": "github:aendrew/koa-browser-sync#typescript",
+    "koa-convert": "^1.2.0",
+    "koa-mount": "^2.0.0",
+    "koa-router": "^7.0.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.0.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
